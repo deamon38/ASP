@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AboutMe</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/fonts/font-awesome.min.css">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/fonts/simple-line-icons.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/slicknav.css">
+    <!-- Menu CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/menu_sideslide.css">
+    <!-- Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/slide-style.css">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/nivo-lightbox.css">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="lib/spa-template/css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AboutMe</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - AboutMe - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="lib/spa-template/js/jquery-min.js"></script>
+    <script src="lib/spa-template/js/popper.min.js"></script>
+    <script src="lib/spa-template/js/bootstrap.min.js"></script>
+    <script src="lib/spa-template/js/jquery.mixitup.js"></script>
+    <script src="lib/spa-template/js/jquery.counterup.min.js"></script>
+    <script src="lib/spa-template/js/waypoints.min.js"></script>
+    <script src="lib/spa-template/js/wow.js"></script>
+    <script src="lib/spa-template/js/jquery.nav.js"></script>
+    <script src="lib/spa-template/js/jquery.easing.min.js"></script>
+    <script src="lib/spa-template/js/nivo-lightbox.js"></script>
+    <script src="lib/spa-template/js/jquery.slicknav.js"></script>
+    <script src="lib/spa-template/js/main.js"></script>
+    <script src="lib/spa-template/js/form-validator.min.js"></script>
+    <script src="lib/spa-template/js/contact-form-script.min.js"></script>
+    <script src="lib/spa-template/js/map.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
